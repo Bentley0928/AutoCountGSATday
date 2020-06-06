@@ -8,6 +8,7 @@ today = datetime.date.today()
 #設定要相減的日期
 other_day = datetime.date(2021,1,22)
 result = other_day - today
+weekend = int((result.days)/7)
 CHANNEL_ACCESS_TOKEN = ""
 to = ""
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
@@ -15,7 +16,7 @@ line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 #文字訊息
 
 try:
-    line_bot_api.push_message(to, TextSendMessage("再 " + str(result.days) + " 天就要學測了"))
+    line_bot_api.push_message(to, TextSendMessage("再 " + str(result.days) + " 天就要學測了, " + "還有 " + str(weekend) + " 個週六日"))
 except LineBotApiError as e:
     # error handle
     raise e
