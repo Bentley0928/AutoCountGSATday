@@ -1,5 +1,5 @@
 # AutoCountGSATday
-Count how many days before gsat and send it to you with LineBot
+Count how many days before gsat and send it to you with LineBot or LineNotify
 <img src="./pic1.png">
 <img src="./pic2.png">
 1. Fill the token
